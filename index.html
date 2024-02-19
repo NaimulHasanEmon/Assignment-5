@@ -244,9 +244,9 @@
                     </div>
                 </div>
             </div>
-            <div class="flex justify-between p-4 gap-16">
+            <div class="flex items-start mt-10 p-6 gap-6">
                 <!-- Select Your Seat -->
-                <div class="flex-1 p-8">
+                <div class="w-[70%] border-r-2 border-dotted p-10">
                     <p class="raleway-semibold text-2xl">Select Your Seat</p>
                     <hr class="my-3">
                     <div class="flex justify-between">
@@ -277,7 +277,8 @@
                         <!-- A -->
                         <div class="flex justify-center gap-16 my-1 w-full items-center">
                             <p class="text-[#03071280] inter-medium">A</p>
-                            <button class="btn px-11 py-4 text-[#03071280] border-none inter-medium">A1</button>
+                            <button onclick="handleSelect()" id="A1"
+                                class="btn px-11 py-4 text-[#03071280] border-none inter-medium">A1</button>
                             <button class="btn px-11 py-4 text-[#03071280] border-none inter-medium">A2</button>
                             <button class="btn px-11 py-4 text-[#03071280] border-none inter-medium">A3</button>
                             <button class="btn px-11 py-4 text-[#03071280] border-none inter-medium">A4</button>
@@ -357,20 +358,97 @@
                     </div>
                 </div>
                 <!-- Select Your Seat 2 -->
-                <div class="flex-1">
-                    <p class="raleway-semibold text-2xl">Select Your Seat</p>
+                <div class="w-[30%]">
+                    <p class="raleway-semibold text-[20px]">Select Your Seat</p>
                     <hr class="my-3">
                     <div>
-                        <div class="flex justify-between">
+                        <div class="flex justify-between items-center">
                             <p class="inter-medium text=-[#030712]">Seat</p>
                             <p class="inter-medium text=-[#030712]">Class</p>
                             <p class="inter-medium text=-[#030712]">Price</p>
+                        </div>
+                        <div class="flex items-center justify-between gap-8 text-black">
+                            <ol id="list-container">
+
+                            </ol>
+                        </div>
+                        <div class="flex items-center justify-between gap-8 text-black">
+                            <h1>C2</h1>
+                            <h1>Economy</h1>
+                            <h1>500</h1>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="bg-base-200 py-6">
+                            <div class="flex justify-between items-center px-5">
+                                <p>Total Price</p>
+                                <p>1500</p>
+                            </div>
+                            <div class="flex items-center my-5 px-5">
+                                <input type="text" placeholder="Type here"
+                                    class="py-1 ps-3 px-10 w-full max-w-xs rounded-none" />
+                                <button class="btn btn-success btn-sm rounded-none text-white">
+                                    <p>Apply</p>
+                                </button>
+                            </div>
+                            <div class="flex justify-between items-center px-5">
+                                <p>Total Price</p>
+                                <p>1500</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label class="form-control w-full max-w-xs">
+                                    <div class="label">
+                                        <span class="label-text">Passenger Name*</span>
+
+                                    </div>
+                                    <input type="text" placeholder="Type here"
+                                        class="py-1 ps-3  w-full max-w-xs rounded-none" required />
+                                    <div class="label">
+
+                                    </div>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="form-control w-full max-w-xs">
+                                    <div class="label">
+                                        <span class="label-text">Phone Number*</span>
+
+                                    </div>
+                                    <input type="number" placeholder="Type here"
+                                        class="py-1 ps-3 w-full max-w-xs rounded-none" />
+                                    <div class="label">
+
+                                    </div>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="form-control w-full max-w-xs">
+                                    <div class="label">
+                                        <span class="label-text">Email ID</span>
+
+                                    </div>
+                                    <input type="email" placeholder="Type here"
+                                        class="py-1 ps-3 w-full max-w-xs rounded-none" />
+                                    <div class="label">
+
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="flex justify-center">
+                                <button class="btn btn-wide  btn-success text-white rounded-none">Next</button>
+                            </div>
+                        </div>
+                        <div class="flex justify-between my-5">
+                            <span class="text-[12px] underline">Terms and Conditions</span>
+                            <span class="text-[12px] underline">Cancellation Policy</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
     <footer class=" p-10 bg-[#030712] text-base-content">
         <div class="flex justify-between">
             <div>
@@ -395,6 +473,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- js -->
+
+    <script src="Script/sricpt.js"></script>
+    <script src="Script/Utility.js"></script>
 </body>
 
 </html>
