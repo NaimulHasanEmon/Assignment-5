@@ -1,10 +1,19 @@
-/** @format */
+// function handleSelect(seat) {
+//   let select = document.getElementById();
+//   setBackgroundColorInKeyboard("A1");
+//   let seat = document.getElementById();
+//   let seatName = "A1";
+//   const tr = eventBubble(seatName);
+//   document.getElementById("list-container").appendChild(tr);
+// }
 
-function handleSelect() {
-  let select = document.getElementById("A1");
-  setBackgroundColorInKeyboard("A1");
-  let seatName = "A1";
-
-  const tr = eventBubble(seatName);
-  document.getElementById("list-container").appendChild(tr); // Append the table row to the ordered list
+function handleSelect(seatId) {
+    const element = document.getElementById(seatId);
+    if (element.classList.contains("bg-green-500")) {
+        removeBackgroundColorInKeyboard(seatId);
+    } else {
+        setBackgroundColorInKeyboard(seatId);
+    }
 }
+
+// document.addEventListener("keyup", handleSelect());
