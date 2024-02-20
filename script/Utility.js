@@ -9,3 +9,16 @@ function eventBubble(seatName) {
       `;
   return tr;
 }
+
+function setInnerTextById(elementId, value) {
+  const element = document.getElementById(elementId);
+  element.innerText = value;
+}
+
+function seatUpdate() {
+  setInnerTextById("seat-update", count);
+}
+
+function seatLeft() {
+  setInnerTextById("seat-left", totalSeatLeft);
+}

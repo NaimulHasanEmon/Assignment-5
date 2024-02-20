@@ -1,4 +1,5 @@
 let count = 0;
+let totalSeatLeft = 40;
 function selected(button) {
   const element = button.classList;
   if (element.contains("bg-[#1DD100]")) {
@@ -11,12 +12,9 @@ function selected(button) {
     document.getElementById("list-container").appendChild(tr);
     element.add("bg-[#1DD100]");
     count += 1;
+    totalSeatLeft -= 1;
     setInnerTextById("total-price", 550 * count);
+    seatUpdate();
+    seatLeft();
   }
-}
-
-function setInnerTextById(elementId, value) {
-  const element = document.getElementById(elementId);
-  console.log(element);
-  element.innerText = value;
 }
