@@ -43,12 +43,12 @@ function checkInfoValidity() {
 
 function handleSuccess() {
   const button = document.getElementById("btn-next");
-
+  // window.location.href = "";
   window.location.href = "success.html";
 }
+
 function handleHome() {
   const button = document.getElementById("btn-home");
-
   window.location.href = "index.html";
 }
 
