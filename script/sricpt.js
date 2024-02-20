@@ -1,3 +1,5 @@
+/** @format */
+
 let count = 0;
 let totalSeatLeft = 40;
 function selected(button) {
@@ -14,18 +16,49 @@ function selected(button) {
     count += 1;
     totalSeatLeft -= 1;
     setInnerTextById("total-price", 550 * count);
+    setInnerTextById("grand-total", 550 * count);
     seatUpdate();
     seatLeft();
   }
 }
 
-function coupon() {
-  const couponCode = getInputValueById('input-coupon-code');
-  if (couponCode === "NEW15") {
-    setInnerTextById("grand-total", (550 * count) - (550 * count * 0.15));
+function checkCouponValidity() {
+  const couponCode = getInputValueById("input-coupon-code");
+  const button = document.getElementById("coupon-code");
+
+  if (couponCode === "NEW15" || couponCode === "Couple 20") {
+    button.disabled = false;
+  } else {
+    button.disabled = true;
   }
-  else if (couponCode === "Couple 20") {
-    setInnerTextById("grand-total", (550 * count) - (550 * count * 0.2));
+}
+function checkInfoValidity() {
+  const button = document.getElementById("btn-next");
+  if (count > 0) {
+    button.disabled = false;
+  } else {
+    button.disabled = true;
+  }
+}
+
+function handleSuccess() {
+  const button = document.getElementById("btn-next");
+
+  window.location.href = "success.html";
+}
+function handleHome() {
+  const button = document.getElementById("btn-home");
+
+  window.location.href = "index.html";
+}
+
+function coupon() {
+  const couponCode = getInputValueById("input-coupon-code");
+
+  if (couponCode === "NEW15") {
+    setInnerTextById("grand-total", 550 * count - 550 * count * 0.15);
+  } else if (couponCode === "Couple 20") {
+    setInnerTextById("grand-total", 550 * count - 550 * count * 0.2);
   } else {
     setInnerTextById("grand-total", 0);
   }
@@ -37,6 +70,4 @@ function getInputValueById(inputFileId) {
   return value;
 }
 
-function Successful() {
-  
-}
+function Successful() {}
