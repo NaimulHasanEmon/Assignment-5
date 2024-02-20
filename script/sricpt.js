@@ -18,3 +18,25 @@ function selected(button) {
     seatLeft();
   }
 }
+
+function coupon() {
+  const couponCode = getInputValueById('input-coupon-code');
+  if (couponCode === "NEW15") {
+    setInnerTextById("grand-total", (550 * count) - (550 * count * 0.15));
+  }
+  else if (couponCode === "Couple 20") {
+    setInnerTextById("grand-total", (550 * count) - (550 * count * 0.2));
+  } else {
+    setInnerTextById("grand-total", 0);
+  }
+}
+
+function getInputValueById(inputFileId) {
+  const inputField = document.getElementById(inputFileId);
+  const value = inputField.value;
+  return value;
+}
+
+function Successful() {
+  
+}
