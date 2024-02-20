@@ -409,10 +409,12 @@
                         <ol id="list-container" class="flex flex-col items-center justify-between gap-2 text-black">
                         </ol>
                         <div class="divider"></div>
-                        <div class="bg-base-200 py-6">
+                        <di class="bg-base-200 py-6">
                             <div class="flex justify-between items-center px-5">
                                 <p>Total Price</p>
-                                <span onclick="calculate()" id="total-price">0</span>
+                                <div>
+                                    <span id="total-price">0</span>
+                                </div>
                             </div>
                             <div class="flex items-center my-5 px-5">
                                 <input type="text" placeholder="Type here"
@@ -425,57 +427,57 @@
                                 <p>Grand Total</p>
                                 <span id="grand-total"></span>
                             </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label class="form-control w-full max-w-xs">
+                                <div class="label">
+                                    <span class="label-text">Passenger Name*</span>
+
+                                </div>
+                                <input type="text" placeholder="Type here"
+                                    class="py-1 ps-3  w-full max-w-xs rounded-none" required />
+                                <div class="label">
+
+                                </div>
+                            </label>
                         </div>
                         <div>
-                            <div>
-                                <label class="form-control w-full max-w-xs">
-                                    <div class="label">
-                                        <span class="label-text">Passenger Name*</span>
+                            <label class="form-control w-full max-w-xs">
+                                <div class="label">
+                                    <span class="label-text">Phone Number*</span>
 
-                                    </div>
-                                    <input type="text" placeholder="Type here"
-                                        class="py-1 ps-3  w-full max-w-xs rounded-none" required />
-                                    <div class="label">
+                                </div>
+                                <input type="number" placeholder="Type here"
+                                    class="py-1 ps-3 w-full max-w-xs rounded-none" />
+                                <div class="label">
 
-                                    </div>
-                                </label>
-                            </div>
-                            <div>
-                                <label class="form-control w-full max-w-xs">
-                                    <div class="label">
-                                        <span class="label-text">Phone Number*</span>
-
-                                    </div>
-                                    <input type="number" placeholder="Type here"
-                                        class="py-1 ps-3 w-full max-w-xs rounded-none" />
-                                    <div class="label">
-
-                                    </div>
-                                </label>
-                            </div>
-                            <div>
-                                <label class="form-control w-full max-w-xs">
-                                    <div class="label">
-                                        <span class="label-text">Email ID</span>
-
-                                    </div>
-                                    <input type="email" placeholder="Type here"
-                                        class="py-1 ps-3 w-full max-w-xs rounded-none" />
-                                    <div class="label">
-
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="flex justify-center">
-                                <button class="btn btn-wide bg-[#1DD100] text-white rounded-lg">Next</button>
-                            </div>
+                                </div>
+                            </label>
                         </div>
-                        <div class="flex justify-between my-5">
-                            <span class="text-[12px] underline">Terms and Conditions</span>
-                            <span class="text-[12px] underline">Cancellation Policy</span>
+                        <div>
+                            <label class="form-control w-full max-w-xs">
+                                <div class="label">
+                                    <span class="label-text">Email ID</span>
+
+                                </div>
+                                <input type="email" placeholder="Type here"
+                                    class="py-1 ps-3 w-full max-w-xs rounded-none" />
+                                <div class="label">
+
+                                </div>
+                            </label>
+                        </div>
+                        <div class="flex justify-center">
+                            <button class="btn btn-wide bg-[#1DD100] text-white rounded-lg">Next</button>
                         </div>
                     </div>
+                    <div class="flex justify-between my-5">
+                        <span class="text-[12px] underline">Terms and Conditions</span>
+                        <span class="text-[12px] underline">Cancellation Policy</span>
+                    </div>
                 </div>
+            </div>
             </div>
         </section>
     </main>
@@ -509,6 +511,7 @@
 
     <script src="Script/sricpt.js"></script>
     <script src="Script/Utility.js"></script>
+    <script src="Script/Price Calculation.js"></script>
 </body>
 
 </html>
