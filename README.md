@@ -1,1 +1,1 @@
-Live Link: https://naimulhasanemon.github.io/Assignment-5/
+Live Link: https://ticker-paribahan.netlify.app/
